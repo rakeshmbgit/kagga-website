@@ -1,0 +1,94 @@
+{
+  "navigation": {
+    "home": "Home",
+    "allKaggas": "All Kaggas",
+    "videos": "Videos",
+    "aboutDVG": "About DVG",
+    "aboutKagga": "About Kagga",
+    "search": "Search Kaggas"
+  },
+  "hero": {
+    "title": "DVG & Mankuthimmana Kagga",
+    "subtitle": "Digital Repository",
+    "description": "Explore the profound wisdom of D.V. Gundappa through Mankuthimmana Kagga. A comprehensive digital platform featuring all 945 Kaggas with translations, meanings, and video explanations.",
+    "exploreButton": "Explore All Kaggas",
+    "watchVideosButton": "Watch Videos",
+    "searchButton": "Search Kaggas"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "notFound": "Page not found",
+    "backToHome": "Back to Home",
+    "readMore": "Read More",
+    "watchVideo": "Watch Video",
+    "share": "Share",
+    "print": "Print",
+    "favorite": "Add to Favorites",
+    "unfavorite": "Remove from Favorites",
+    "next": "Next",
+    "previous": "Previous",
+    "of": "of",
+    "search": "Search",
+    "filter": "Filter",
+    "allThemes": "All Themes",
+    "showing": "Showing",
+    "kaggas": "Kaggas",
+    "language": "Language"
+  },
+  "kagga": {
+    "title": "Kagga {id}",
+    "originalText": "Original Text (ಕನ್ನಡ)",
+    "transliteration": "Transliteration",
+    "englishTranslation": "English Translation",
+    "wordByWordMeaning": "Word-by-Word Meaning",
+    "meaning": "Meaning & Interpretation",
+    "themes": "Themes",
+    "videoExplanation": "Video Explanation",
+    "showVideo": "Show Video",
+    "hideVideo": "Hide Video",
+    "relatedKaggas": "Related Kaggas",
+    "readFullKagga": "Read Full Kagga",
+    "watchVideo": "Watch Video"
+  },
+  "footer": {
+    "description": "A comprehensive digital repository dedicated to preserving and sharing the profound wisdom of D.V. Gundappa's Mankuthimmana Kagga.",
+    "quickLinks": "Quick Links",
+    "resources": "Resources",
+    "search": "Search Kaggas",
+    "browseByTheme": "Browse by Theme",
+    "favorites": "Favorites",
+    "contactUs": "Contact Us",
+    "madeWith": "Made with",
+    "forKannadaLiterature": "for Kannada literature",
+    "allRightsReserved": "All rights reserved"
+  },
+  "about": {
+    "dvg": {
+      "title": "About D.V. Gundappa",
+      "subtitle": "The Philosopher-Poet",
+      "biography": "D.V. Gundappa (1887-1975) was a renowned Kannada writer, philosopher, and journalist. He is best known for his magnum opus 'Mankuthimmana Kagga', a collection of 945 philosophical verses that explore the essence of life, dharma, and human existence.",
+      "legacy": "His works continue to inspire generations with their timeless wisdom and profound insights into human nature and the universe."
+    },
+    "kagga": {
+      "title": "About Mankuthimmana Kagga",
+      "subtitle": "The Philosophical Masterpiece",
+      "description": "Mankuthimmana Kagga is a collection of 945 philosophical verses written by D.V. Gundappa. Each verse encapsulates profound wisdom in simple, memorable language, making complex philosophical concepts accessible to all.",
+      "structure": "The work is structured around various themes including dharma, karma, time, life, and the cosmic order, offering guidance for righteous living."
+    }
+  },
+  "search": {
+    "title": "Search Kaggas",
+    "subtitle": "Find the wisdom you seek",
+    "placeholder": "Search by number, text, or theme...",
+    "filterByTheme": "Filter by Theme",
+    "results": "Search Results",
+    "noResults": "No Kaggas found matching your search criteria."
+  },
+  "videos": {
+    "title": "Video Explanations",
+    "subtitle": "Visual insights into Kagga wisdom",
+    "description": "Watch detailed explanations and interpretations of selected Kaggas by scholars and experts.",
+    "comingSoon": "Video explanations coming soon!"
+  }
+} 
