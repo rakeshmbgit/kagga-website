@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { kaggas } from '@/data/kaggas';
-import { Search, Filter, BookOpen, Play, X, ChevronDown } from 'lucide-react';
+import { Search, Filter, BookOpen, Play, X, ChevronDown, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 import { Kagga } from '@/types/kagga';
 
@@ -42,46 +42,53 @@ export default function SearchPage() {
   }, [searchQuery, selectedTheme]);
 
   return (
-    <div className="min-h-screen bg-earth-50">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 via-yellow-50 to-red-100">
       <Header />
       
-      <main className="py-8">
+      <main className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-earth-900 mb-4">
-              {t('title')}
-            </h1>
-            <p className="text-xl text-earth-600 max-w-3xl mx-auto">
-              {t('subtitle')}
-            </p>
+          {/* Hero Header */}
+          <div className="text-center mb-16 relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-yellow-500/10 rounded-3xl blur-3xl"></div>
+            <div className="relative">
+              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500 to-yellow-500 text-white px-4 py-2 rounded-full text-sm font-medium mb-6 animate-pulse">
+                <Search className="w-4 h-4" />
+                <span>ಕನ್ನಡ ಸಾಹಿತ್ಯ ಹುಡುಕಾಟ</span>
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-red-600 to-yellow-600 bg-clip-text text-transparent mb-6 animate-fade-in">
+                {t('title')}
+              </h1>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                {t('subtitle')}
+              </p>
+            </div>
           </div>
 
           {/* Search and Filter */}
-          <div className="bg-white rounded-xl shadow-sm border border-earth-200 p-6 mb-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="backdrop-blur-md bg-white/80 rounded-2xl shadow-xl border border-white/20 p-8 mb-12 transform hover:scale-[1.02] transition-all duration-300">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Search */}
-              <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-earth-400 w-5 h-5" />
-              <input
-                type="text"
+              <div className="relative group">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 group-focus-within:text-red-500 transition-colors duration-200" />
+                <input
+                  type="text"
                   placeholder={t('placeholder')}
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-earth-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-              />
-            </div>
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all duration-200 bg-white/50 backdrop-blur-sm"
+                />
+              </div>
 
               {/* Theme Filter */}
-              <div className="relative">
-                <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-earth-400 w-5 h-5" />
+              <div className="relative group">
+                <Filter className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 group-focus-within:text-yellow-500 transition-colors duration-200" />
                 <select
                   value={selectedTheme}
                   onChange={(e) => setSelectedTheme(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-earth-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent appearance-none bg-white"
+                  className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200 bg-white/50 backdrop-blur-sm appearance-none"
                 >
                   <option value="">{t('filterByTheme')}</option>
-                      {themes.map((theme) => (
+                  {themes.map((theme) => (
                     <option key={theme} value={theme}>
                       {theme}
                     </option>
@@ -92,65 +99,68 @@ export default function SearchPage() {
           </div>
 
           {/* Results */}
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold text-earth-900 mb-4">
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 bg-gradient-to-r from-red-600 to-yellow-600 bg-clip-text text-transparent">
               {t('results')} ({filteredKaggas.length})
             </h2>
             
             {filteredKaggas.length === 0 ? (
-              <div className="text-center py-12">
-                <BookOpen className="w-16 h-16 text-earth-400 mx-auto mb-4" />
-                <p className="text-earth-600 text-lg">
+              <div className="text-center py-16 backdrop-blur-md bg-white/80 rounded-2xl shadow-xl border border-white/20">
+                <BookOpen className="w-20 h-20 text-gray-400 mx-auto mb-6" />
+                <p className="text-gray-600 text-xl font-medium">
                   {t('noResults')}
                 </p>
               </div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredKaggas.map((kagga: Kagga) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredKaggas.map((kagga: Kagga, index: number) => (
                   <Link
                     key={kagga.id}
                     href={`kaggas/${kagga.id}`}
-                    className="bg-white rounded-xl shadow-sm border border-earth-200 p-6 hover:shadow-md transition-shadow duration-200 group"
+                    className="group relative"
+                    style={{ animationDelay: `${index * 100}ms` }}
                   >
-                <div className="flex items-center justify-between mb-4">
-                      <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
-                        <BookOpen className="w-5 h-5 text-primary-600" />
-                    </div>
-                      <span className="text-sm font-medium text-earth-600">
-                        #{kagga.id}
-                      </span>
-                </div>
-                
-                <div className="mb-4">
-                      <p className="kagga-text text-lg leading-relaxed text-center mb-3">
-                    {kagga.kannadaText}
-                  </p>
-                      <p className="translation text-sm text-earth-600 text-center">
-                    "{kagga.englishTranslation}"
-                  </p>
-                </div>
+                    <div className="backdrop-blur-md bg-white/80 rounded-2xl shadow-lg border border-white/20 p-6 hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-fade-in-up group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:to-yellow-50">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-yellow-500 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200">
+                          <BookOpen className="w-6 h-6 text-white" />
+                        </div>
+                        <span className="text-sm font-bold text-gray-600 bg-gradient-to-r from-red-500 to-yellow-500 bg-clip-text text-transparent">
+                          #{kagga.id}
+                        </span>
+                      </div>
+                      
+                      <div className="mb-4">
+                        <p className="kagga-text text-lg leading-relaxed text-center mb-3 text-gray-800 group-hover:text-gray-900 transition-colors duration-200">
+                          {kagga.kannadaText}
+                        </p>
+                        <p className="translation text-sm text-gray-600 text-center italic group-hover:text-gray-700 transition-colors duration-200">
+                          "{kagga.englishTranslation}"
+                        </p>
+                      </div>
 
-                    {kagga.themes && kagga.themes.length > 0 && (
-                    <div className="flex flex-wrap gap-1">
-                        {kagga.themes.slice(0, 2).map((theme: string, index: number) => (
-                        <span
-                            key={index}
-                            className="px-2 py-1 bg-earth-100 text-earth-700 rounded-full text-xs"
-                        >
-                          {theme}
-                        </span>
-                      ))}
-                        {kagga.themes.length > 2 && (
-                          <span className="px-2 py-1 bg-earth-100 text-earth-700 rounded-full text-xs">
-                            +{kagga.themes.length - 2}
-                        </span>
+                      {kagga.themes && kagga.themes.length > 0 && (
+                        <div className="flex flex-wrap gap-2">
+                          {kagga.themes.slice(0, 2).map((theme: string, index: number) => (
+                            <span
+                              key={index}
+                              className="px-3 py-1 bg-gradient-to-r from-red-100 to-yellow-100 text-gray-700 rounded-full text-xs font-medium border border-red-200/50 group-hover:from-red-200 group-hover:to-yellow-200 transition-all duration-200"
+                            >
+                              {theme}
+                            </span>
+                          ))}
+                          {kagga.themes.length > 2 && (
+                            <span className="px-3 py-1 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-600 rounded-full text-xs font-medium">
+                              +{kagga.themes.length - 2}
+                            </span>
+                          )}
+                        </div>
                       )}
-                  </div>
-                )}
+                    </div>
                   </Link>
                 ))}
-            </div>
-          )}
+              </div>
+            )}
           </div>
         </div>
       </main>
