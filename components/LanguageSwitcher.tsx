@@ -23,10 +23,22 @@ const LanguageSwitcher = () => {
     setIsOpen(false);
     
     // Remove the current locale from the pathname
-    const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
+    let pathWithoutLocale = pathname.replace(`/${locale}`, '');
+    
+    // If we're at the root locale path, ensure we have a slash
+    if (pathWithoutLocale === '') {
+      pathWithoutLocale = '/';
+    }
+    
+    // Handle special case where we're at the root
+    if (pathname === '/' || pathname === `/${locale}`) {
+      router.push(`/${newLocale}`);
+      return;
+    }
     
     // Navigate to the new locale
-    router.push(`/${newLocale}${pathWithoutLocale}`);
+    const newPath = `/${newLocale}${pathWithoutLocale}`;
+    router.push(newPath);
   };
 
   return (
