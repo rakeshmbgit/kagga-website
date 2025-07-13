@@ -13,6 +13,7 @@ import { Kagga } from '@/types/kagga';
 export default function HomePage() {
   const t = useTranslations();
   const commonT = useTranslations('common');
+  const homeT = useTranslations('home');
 
   // Get featured Kaggas (first 6)
   const featuredKaggas = kaggas.slice(0, 6);
@@ -20,23 +21,23 @@ export default function HomePage() {
   const features = [
     {
       icon: BookOpen,
-      title: '945 Kaggas',
-      description: 'Complete collection of Mankuthimmana Kagga with translations and meanings',
+      title: homeT('features.kaggasTitle'),
+      description: homeT('features.kaggasDesc'),
     },
     {
       icon: Video,
-      title: 'Video Explanations',
-      description: 'Visual insights and detailed explanations by scholars and experts',
+      title: homeT('features.videosTitle'),
+      description: homeT('features.videosDesc'),
     },
     {
       icon: Search,
-      title: 'Advanced Search',
-      description: 'Find specific Kaggas by theme, content, or keywords',
+      title: homeT('features.searchTitle'),
+      description: homeT('features.searchDesc'),
     },
     {
       icon: Heart,
-      title: 'Personal Favorites',
-      description: 'Save and organize your favorite Kaggas for easy access',
+      title: homeT('features.favoritesTitle'),
+      description: homeT('features.favoritesDesc'),
     },
   ];
 
@@ -52,10 +53,10 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-earth-900 mb-4">
-                Discover the Complete Kagga Experience
+                {homeT('discoverTitle')}
               </h2>
               <p className="text-xl text-earth-600 max-w-3xl mx-auto">
-                Explore the profound wisdom of D.V. Gundappa through our comprehensive digital platform
+                {homeT('discoverSubtitle')}
               </p>
             </div>
 
@@ -85,10 +86,10 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-earth-900 mb-4">
-                Featured Kaggas
+                {homeT('featuredKaggas')}
               </h2>
               <p className="text-xl text-earth-600 max-w-3xl mx-auto">
-                Start your journey with these timeless verses of wisdom
+                {homeT('featuredSubtitle')}
               </p>
             </div>
 
@@ -108,7 +109,7 @@ export default function HomePage() {
                 className="btn-primary inline-flex items-center group"
               >
                 <BookOpen className="w-5 h-5 mr-2" />
-                View All Kaggas
+                {homeT('viewAllKaggas')}
                 <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200">
                   →
                 </span>

@@ -22,6 +22,11 @@ const LanguageSwitcher = () => {
   const handleLanguageChange = (newLocale: string) => {
     setIsOpen(false);
     
+    // Handle the case where we're already on the target locale
+    if (locale === newLocale) {
+      return;
+    }
+    
     // Extract the path without the locale prefix
     let pathWithoutLocale = pathname;
     
@@ -30,10 +35,26 @@ const LanguageSwitcher = () => {
       pathWithoutLocale = pathname.substring(`/${locale}`.length);
     } else if (pathname === `/${locale}`) {
       pathWithoutLocale = '';
+    } else {
+      // If pathname doesn't start with current locale, it might be corrupted
+      // Try to extract the path after the first locale segment
+      const segments = pathname.split('/').filter(Boolean);
+      if (segments.length > 0 && (segments[0] === 'en' || segments[0] === 'kn')) {
+        pathWithoutLocale = '/' + segments.slice(1).join('/');
+      } else {
+        pathWithoutLocale = '';
+      }
     }
     
     // Construct the new path
     const newPath = pathWithoutLocale ? `/${newLocale}${pathWithoutLocale}` : `/${newLocale}`;
+    
+    // Prevent double locale paths
+    if (newPath.includes(`/${newLocale}/${newLocale}`)) {
+      router.push(`/${newLocale}`);
+      return;
+    }
+    
     router.push(newPath);
   };
 

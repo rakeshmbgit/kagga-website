@@ -38,7 +38,7 @@ export default function AboutDVGPage() {
                       <BookOpen className="w-12 h-12 text-primary-600" />
                     </div>
                     <p className="text-earth-600 text-sm">
-                      Portrait of D.V. Gundappa
+                      {t('portrait')}
                     </p>
                   </div>
                 </div>
@@ -54,7 +54,7 @@ export default function AboutDVGPage() {
                   <div className="flex items-center space-x-3">
                     <Calendar className="w-5 h-5 text-primary-600" />
                     <div>
-                      <p className="text-sm text-earth-600">Born</p>
+                      <p className="text-sm text-earth-600">{t('born')}</p>
                       <p className="font-medium">{dvgInfo.birthDate}</p>
                     </div>
                   </div>
@@ -62,7 +62,7 @@ export default function AboutDVGPage() {
                   <div className="flex items-center space-x-3">
                     <MapPin className="w-5 h-5 text-primary-600" />
                     <div>
-                      <p className="text-sm text-earth-600">Birthplace</p>
+                      <p className="text-sm text-earth-600">{t('birthplace')}</p>
                       <p className="font-medium">{dvgInfo.birthplace}</p>
                     </div>
                   </div>
@@ -70,7 +70,7 @@ export default function AboutDVGPage() {
                   <div className="flex items-center space-x-3">
                     <Award className="w-5 h-5 text-primary-600" />
                     <div>
-                      <p className="text-sm text-earth-600">Notable Award</p>
+                      <p className="text-sm text-earth-600">{t('notableAward')}</p>
                       <p className="font-medium">Padma Bhushan (1974)</p>
                     </div>
                   </div>
@@ -78,7 +78,7 @@ export default function AboutDVGPage() {
                   <div className="flex items-center space-x-3">
                     <BookOpen className="w-5 h-5 text-primary-600" />
                     <div>
-                      <p className="text-sm text-earth-600">Masterpiece</p>
+                      <p className="text-sm text-earth-600">{t('masterpiece')}</p>
                       <p className="font-medium">Mankuthimmana Kagga</p>
                     </div>
                   </div>
@@ -100,7 +100,7 @@ export default function AboutDVGPage() {
                 <BookOpen className="w-6 h-6 text-primary-600" />
               </div>
               <h2 className="text-2xl font-bold text-earth-900">
-              Biography
+              {t('biographyTitle')}
             </h2>
             </div>
             
@@ -113,21 +113,21 @@ export default function AboutDVGPage() {
                 <div className="flex items-center space-x-3">
                   <Calendar className="w-5 h-5 text-primary-600" />
                   <div>
-                    <p className="text-sm text-earth-600">Born</p>
+                    <p className="text-sm text-earth-600">{t('born')}</p>
                     <p className="font-medium text-earth-900">1887</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Calendar className="w-5 h-5 text-primary-600" />
                   <div>
-                    <p className="text-sm text-earth-600">Died</p>
+                    <p className="text-sm text-earth-600">{t('died')}</p>
                     <p className="font-medium text-earth-900">1975</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-primary-600" />
                   <div>
-                    <p className="text-sm text-earth-600">Place</p>
+                    <p className="text-sm text-earth-600">{t('place')}</p>
                     <p className="font-medium text-earth-900">Karnataka, India</p>
                   </div>
                 </div>
@@ -138,7 +138,7 @@ export default function AboutDVGPage() {
           {/* Notable Works */}
           <div className="bg-white rounded-xl shadow-sm border border-earth-200 p-8 mb-8">
             <h2 className="text-2xl font-bold text-earth-900 mb-6">
-              Notable Works
+              {t('notableWorks')}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {dvgInfo.notableWorks.map((work, index) => (
@@ -155,7 +155,7 @@ export default function AboutDVGPage() {
           {/* Awards and Recognition */}
           <div className="bg-white rounded-xl shadow-sm border border-earth-200 p-8 mb-8">
             <h2 className="text-2xl font-bold text-earth-900 mb-6">
-              Awards and Recognition
+              {t('awardsAndRecognition')}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {dvgInfo.awards.map((award, index) => (
@@ -176,7 +176,7 @@ export default function AboutDVGPage() {
                 <Award className="w-6 h-6 text-wisdom-600" />
               </div>
               <h2 className="text-2xl font-bold text-earth-900">
-              Legacy
+              {t('legacyTitle')}
             </h2>
           </div>
 
@@ -201,11 +201,10 @@ export default function AboutDVGPage() {
           {/* CTA Section */}
           <div className="bg-white rounded-xl shadow-sm border border-earth-200 p-8 text-center">
             <h2 className="text-2xl font-bold text-earth-900 mb-4">
-              Explore DVG's Wisdom
+              {t('exploreWisdom')}
             </h2>
             <p className="text-earth-600 mb-6 max-w-2xl mx-auto">
-              Discover the profound wisdom of D.V. Gundappa through his masterpiece, Mankuthimmana Kagga. 
-              Each of the 945 verses contains timeless insights that are as relevant today as they were when written.
+              {t('exploreWisdomDesc')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -213,14 +212,14 @@ export default function AboutDVGPage() {
                 className="btn-primary inline-flex items-center justify-center"
               >
                 <BookOpen className="w-5 h-5 mr-2" />
-                Read All Kaggas
+                {t('readAllKaggas')}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
               <Link
                 href="about-kagga"
                 className="btn-secondary inline-flex items-center justify-center"
               >
-                Learn About Mankuthimmana Kagga
+                {t('learnAboutKagga')}
                 <ExternalLink className="w-4 h-4 ml-2" />
               </Link>
             </div>

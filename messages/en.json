@@ -34,7 +34,9 @@
     "allThemes": "All Themes",
     "showing": "Showing",
     "kaggas": "Kaggas",
-    "language": "Language"
+    "language": "Language",
+    "brandName": "DVG Kagga",
+    "digitalRepository": "Digital Repository"
   },
   "kagga": {
     "title": "Kagga {id}",
@@ -68,13 +70,39 @@
       "title": "About D.V. Gundappa",
       "subtitle": "The Philosopher-Poet",
       "biography": "D.V. Gundappa (1887-1975) was a renowned Kannada writer, philosopher, and journalist. He is best known for his magnum opus 'Mankuthimmana Kagga', a collection of 945 philosophical verses that explore the essence of life, dharma, and human existence.",
-      "legacy": "His works continue to inspire generations with their timeless wisdom and profound insights into human nature and the universe."
+      "legacy": "His works continue to inspire generations with their timeless wisdom and profound insights into human nature and the universe.",
+      "portrait": "Portrait of D.V. Gundappa",
+      "born": "Born",
+      "birthplace": "Birthplace",
+      "notableAward": "Notable Award",
+      "masterpiece": "Masterpiece",
+      "died": "Died",
+      "place": "Place",
+      "biographyTitle": "Biography",
+      "notableWorks": "Notable Works",
+      "awardsAndRecognition": "Awards and Recognition",
+      "legacyTitle": "Legacy",
+      "exploreWisdom": "Explore DVG's Wisdom",
+      "exploreWisdomDesc": "Discover the profound wisdom of D.V. Gundappa through his masterpiece, Mankuthimmana Kagga. Each of the 945 verses contains timeless insights that are as relevant today as they were when written.",
+      "readAllKaggas": "Read All Kaggas",
+      "learnAboutKagga": "Learn About Mankuthimmana Kagga"
     },
     "kagga": {
       "title": "About Mankuthimmana Kagga",
       "subtitle": "The Philosophical Masterpiece",
       "description": "Mankuthimmana Kagga is a collection of 945 philosophical verses written by D.V. Gundappa. Each verse encapsulates profound wisdom in simple, memorable language, making complex philosophical concepts accessible to all.",
-      "structure": "The work is structured around various themes including dharma, karma, time, life, and the cosmic order, offering guidance for righteous living."
+      "structure": "The work is structured around various themes including dharma, karma, time, life, and the cosmic order, offering guidance for righteous living.",
+      "aboutTheWork": "About the Work",
+      "verses": "Verses",
+      "themes": "Themes",
+      "readers": "Readers",
+      "published": "Published",
+      "structureAndThemes": "Structure & Themes",
+      "sampleVerses": "Sample Verses",
+      "startYourJourney": "Start Your Journey",
+      "startYourJourneyDesc": "Begin exploring the wisdom of Mankuthimmana Kagga. Each verse offers profound insights that can guide you through life's challenges and joys.",
+      "exploreAllKaggas": "Explore All Kaggas",
+      "searchByTheme": "Search by Theme"
     }
   },
   "search": {
@@ -89,6 +117,36 @@
     "title": "Video Explanations",
     "subtitle": "Visual insights into Kagga wisdom",
     "description": "Watch detailed explanations and interpretations of selected Kaggas by scholars and experts.",
-    "comingSoon": "Video explanations coming soon!"
+    "comingSoon": "Video explanations coming soon!",
+    "comingSoonDesc": "We're working hard to bring you comprehensive video explanations of Mankuthimmana Kagga. These videos will feature expert scholars and teachers explaining the profound wisdom contained in each verse.",
+    "expertExplanations": "Expert Explanations",
+    "detailedAnalysis": "Detailed Analysis",
+    "interactiveLearning": "Interactive Learning",
+    "readKaggasNow": "Read Kaggas Now",
+    "searchKaggas": "Search Kaggas",
+    "whatToExpect": "What to Expect",
+    "expertCommentary": "Expert Commentary",
+    "expertCommentaryDesc": "Detailed explanations by renowned scholars and teachers of Kannada literature and philosophy.",
+    "contextBackground": "Context & Background",
+    "contextBackgroundDesc": "Historical and cultural context to help understand the deeper meaning of each verse.",
+    "modernRelevance": "Modern Relevance",
+    "modernRelevanceDesc": "How the ancient wisdom applies to contemporary life and modern challenges."
+  },
+  "home": {
+    "discoverTitle": "Discover the Complete Kagga Experience",
+    "discoverSubtitle": "Explore the profound wisdom of D.V. Gundappa through our comprehensive digital platform",
+    "featuredKaggas": "Featured Kaggas",
+    "featuredSubtitle": "Start your journey with these timeless verses of wisdom",
+    "viewAllKaggas": "View All Kaggas",
+    "features": {
+      "kaggasTitle": "945 Kaggas",
+      "kaggasDesc": "Complete collection of Mankuthimmana Kagga with translations and meanings",
+      "videosTitle": "Video Explanations",
+      "videosDesc": "Visual insights and detailed explanations by scholars and experts",
+      "searchTitle": "Advanced Search",
+      "searchDesc": "Find specific Kaggas by theme, content, or keywords",
+      "favoritesTitle": "Personal Favorites",
+      "favoritesDesc": "Save and organize your favorite Kaggas for easy access"
+    }
   }
 } 

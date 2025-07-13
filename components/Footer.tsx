@@ -7,6 +7,7 @@ import { BookOpen, Mail, Github, Heart } from 'lucide-react';
 const Footer = () => {
   const t = useTranslations('footer');
   const navT = useTranslations('navigation');
+  const commonT = useTranslations('common');
   const locale = useLocale();
 
   const quickLinks = [
@@ -33,7 +34,7 @@ const Footer = () => {
               <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
                 <BookOpen className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold">DVG Kagga</span>
+              <span className="text-xl font-bold">{commonT('brandName')}</span>
             </div>
             <p className="text-earth-300 mb-4 max-w-md">
               {t('description')}
@@ -96,7 +97,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-earth-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-earth-400 text-sm">
-            © {new Date().getFullYear()} DVG Kagga Digital Repository. {t('allRightsReserved')}.
+            © {new Date().getFullYear()} {commonT('brandName')} {commonT('digitalRepository')}. {t('allRightsReserved')}.
           </p>
           <div className="flex items-center space-x-2 text-earth-400 text-sm mt-4 md:mt-0">
             <span>{t('madeWith')}</span>

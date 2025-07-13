@@ -10,6 +10,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const t = useTranslations('navigation');
+  const commonT = useTranslations('common');
   const locale = useLocale();
 
   const navigation = [
@@ -36,7 +37,7 @@ const Header = () => {
             <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
               <BookOpen className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-earth-900">DVG Kagga</span>
+            <span className="text-xl font-bold text-earth-900">{commonT('brandName')}</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -34,7 +34,7 @@ export default function AboutKaggaPage() {
                 <BookOpen className="w-6 h-6 text-primary-600" />
               </div>
               <h2 className="text-2xl font-bold text-earth-900">
-                About the Work
+                {t('aboutTheWork')}
               </h2>
             </div>
 
@@ -49,28 +49,28 @@ export default function AboutKaggaPage() {
                     <BookOpen className="w-6 h-6 text-primary-600" />
                   </div>
                   <p className="text-2xl font-bold text-earth-900">945</p>
-                  <p className="text-sm text-earth-600">Verses</p>
+                  <p className="text-sm text-earth-600">{t('verses')}</p>
                 </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-wisdom-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Star className="w-6 h-6 text-wisdom-600" />
                   </div>
                   <p className="text-2xl font-bold text-earth-900">50+</p>
-                  <p className="text-sm text-earth-600">Themes</p>
+                  <p className="text-sm text-earth-600">{t('themes')}</p>
                 </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-earth-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Users className="w-6 h-6 text-earth-600" />
                   </div>
                   <p className="text-2xl font-bold text-earth-900">Millions</p>
-                  <p className="text-sm text-earth-600">Readers</p>
+                  <p className="text-sm text-earth-600">{t('readers')}</p>
                 </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Calendar className="w-6 h-6 text-primary-600" />
                   </div>
                   <p className="text-2xl font-bold text-earth-900">1943</p>
-                  <p className="text-sm text-earth-600">Published</p>
+                  <p className="text-sm text-earth-600">{t('published')}</p>
                 </div>
               </div>
             </div>
@@ -83,7 +83,7 @@ export default function AboutKaggaPage() {
                 <Star className="w-6 h-6 text-wisdom-600" />
               </div>
               <h2 className="text-2xl font-bold text-earth-900">
-                Structure & Themes
+                {t('structureAndThemes')}
             </h2>
           </div>
 
@@ -97,7 +97,7 @@ export default function AboutKaggaPage() {
           {/* Sample Verses */}
           <div className="bg-gradient-to-r from-primary-50 to-wisdom-50 rounded-xl p-8">
             <h2 className="text-2xl font-bold text-earth-900 mb-6 text-center">
-              Sample Verses
+              {t('sampleVerses')}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white rounded-lg p-6 shadow-sm">
@@ -122,11 +122,10 @@ export default function AboutKaggaPage() {
           {/* Call to Action */}
           <div className="bg-white rounded-xl shadow-sm border border-earth-200 p-8 text-center">
             <h2 className="text-2xl font-bold text-earth-900 mb-4">
-              Start Your Journey
+              {t('startYourJourney')}
             </h2>
             <p className="text-earth-600 mb-6 max-w-2xl mx-auto">
-              Begin exploring the wisdom of Mankuthimmana Kagga. Each verse offers 
-              profound insights that can guide you through life's challenges and joys.
+              {t('startYourJourneyDesc')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -134,14 +133,14 @@ export default function AboutKaggaPage() {
                 className="btn-primary inline-flex items-center justify-center"
               >
                 <BookOpen className="w-5 h-5 mr-2" />
-                Explore All Kaggas
+                {t('exploreAllKaggas')}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
               <Link
                 href="search"
                 className="btn-secondary inline-flex items-center justify-center"
               >
-                Search by Theme
+                {t('searchByTheme')}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
