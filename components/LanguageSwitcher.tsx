@@ -22,24 +22,19 @@ const LanguageSwitcher = () => {
   const handleLanguageChange = (newLocale: string) => {
     setIsOpen(false);
     
-    // Get the path without the current locale
+    // Extract the path without the locale prefix
     let pathWithoutLocale = pathname;
     
-    // Remove the current locale from the pathname if it exists
+    // Remove the current locale prefix
     if (pathname.startsWith(`/${locale}/`)) {
-      pathWithoutLocale = pathname.replace(`/${locale}/`, '/');
+      pathWithoutLocale = pathname.substring(`/${locale}`.length);
     } else if (pathname === `/${locale}`) {
-      pathWithoutLocale = '/';
+      pathWithoutLocale = '';
     }
     
-    // Ensure we don't have double slashes
-    if (pathWithoutLocale === '/') {
-      router.push(`/${newLocale}`);
-    } else {
-      // Remove leading slash if it exists to avoid double slashes
-      const cleanPath = pathWithoutLocale.startsWith('/') ? pathWithoutLocale.slice(1) : pathWithoutLocale;
-      router.push(`/${newLocale}/${cleanPath}`);
-    }
+    // Construct the new path
+    const newPath = pathWithoutLocale ? `/${newLocale}${pathWithoutLocale}` : `/${newLocale}`;
+    router.push(newPath);
   };
 
   return (

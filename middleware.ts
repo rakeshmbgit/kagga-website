@@ -8,7 +8,10 @@ export default createMiddleware({
   defaultLocale: 'en',
   
   // Always redirect to locale-prefixed routes
-  localePrefix: 'always'
+  localePrefix: 'always',
+  
+  // Disable automatic locale detection to ensure English is default
+  localeDetection: false
 });
 
 export const config = {
