@@ -4,37 +4,38 @@ import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { allKaggas } from '@/data/kaggas';
+import { kaggas } from '@/data/kaggas';
 import { Search, Filter, BookOpen, Play, X, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
+import { Kagga } from '@/types/kagga';
 
 export default function SearchPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTheme, setSelectedTheme] = useState('');
-  const [filteredKaggas, setFilteredKaggas] = useState(allKaggas);
+  const [filteredKaggas, setFilteredKaggas] = useState<Kagga[]>(kaggas);
   
   const t = useTranslations('search');
   const commonT = useTranslations('common');
 
   // Get unique themes
-  const themes = Array.from(new Set(allKaggas.flatMap(kagga => kagga.themes))).sort();
+  const themes = Array.from(new Set(kaggas.flatMap((kagga: Kagga) => kagga.themes))).sort();
 
   // Filter Kaggas based on search and theme
   useEffect(() => {
-    let filtered = allKaggas;
+    let filtered = kaggas;
 
     if (searchQuery) {
-      filtered = filtered.filter(kagga =>
+      filtered = filtered.filter((kagga: Kagga) =>
         kagga.id.toString().includes(searchQuery) ||
         kagga.kannadaText.toLowerCase().includes(searchQuery.toLowerCase()) ||
         kagga.transliteration.toLowerCase().includes(searchQuery.toLowerCase()) ||
         kagga.englishTranslation.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        kagga.themes.some(theme => theme.toLowerCase().includes(searchQuery.toLowerCase()))
+        kagga.themes.some((theme: string) => theme.toLowerCase().includes(searchQuery.toLowerCase()))
       );
     }
 
     if (selectedTheme) {
-      filtered = filtered.filter(kagga => kagga.themes.includes(selectedTheme));
+      filtered = filtered.filter((kagga: Kagga) => kagga.themes.includes(selectedTheme));
     }
 
     setFilteredKaggas(filtered);
@@ -105,7 +106,7 @@ export default function SearchPage() {
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredKaggas.map((kagga) => (
+            {filteredKaggas.map((kagga: Kagga) => (
                   <Link
                     key={kagga.id}
                     href={`kaggas/${kagga.id}`}
@@ -131,7 +132,7 @@ export default function SearchPage() {
 
                     {kagga.themes && kagga.themes.length > 0 && (
                     <div className="flex flex-wrap gap-1">
-                        {kagga.themes.slice(0, 2).map((theme, index) => (
+                        {kagga.themes.slice(0, 2).map((theme: string, index: number) => (
                         <span
                             key={index}
                             className="px-2 py-1 bg-earth-100 text-earth-700 rounded-full text-xs"

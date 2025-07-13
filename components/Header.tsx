@@ -32,20 +32,33 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-              <BookOpen className="w-5 h-5 text-white" />
+          <Link href={`/${locale}`} className="flex items-center space-x-3 mr-8">
+            <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
+              <BookOpen className="w-6 h-6 text-white" />
             </div>
             <span className="text-xl font-bold text-earth-900">DVG Kagga</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-earth-600 hover:text-primary-600 transition-colors duration-200 font-medium"
+                className="text-earth-600 hover:text-primary-600 transition-colors duration-200 font-medium px-3 py-2 rounded-md hover:bg-earth-50"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Medium Screen Navigation (fewer items) */}
+          <nav className="hidden md:flex lg:hidden items-center space-x-4">
+            {navigation.slice(0, 3).map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-earth-600 hover:text-primary-600 transition-colors duration-200 font-medium px-2 py-2 rounded-md hover:bg-earth-50 text-sm"
               >
                 {item.name}
               </Link>
@@ -53,7 +66,7 @@ const Header = () => {
           </nav>
 
           {/* Search Bar */}
-          <div className="hidden md:flex items-center flex-1 max-w-md mx-8">
+          <div className="hidden md:flex items-center flex-1 max-w-sm mx-6">
             <form onSubmit={handleSearch} className="w-full">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-earth-400 w-4 h-4" />
@@ -62,14 +75,14 @@ const Header = () => {
                   placeholder={t('search')}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-earth-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 border border-earth-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
                 />
               </div>
             </form>
           </div>
 
           {/* Language Switcher */}
-          <div className="hidden md:block">
+          <div className="hidden md:block ml-4">
             <LanguageSwitcher />
           </div>
 

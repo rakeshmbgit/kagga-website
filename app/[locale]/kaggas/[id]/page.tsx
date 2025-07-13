@@ -17,8 +17,8 @@ export default async function KaggaDetailPage({ params }: KaggaDetailPageProps) 
     notFound();
   }
 
-  const prevKagga = kaggaId > 1 ? getKaggaById(kaggaId - 1) : null;
-  const nextKagga = kaggaId < 945 ? getKaggaById(kaggaId + 1) : null;
+  const prevKagga = kaggaId > 1 ? getKaggaById(kaggaId - 1) || null : null;
+  const nextKagga = kaggaId < 945 ? getKaggaById(kaggaId + 1) || null : null;
 
   return <KaggaDetailClient kagga={kagga} prevKagga={prevKagga} nextKagga={nextKagga} />;
 } 

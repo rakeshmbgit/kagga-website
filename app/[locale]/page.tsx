@@ -5,16 +5,17 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import KaggaCard from '@/components/KaggaCard';
-import { allKaggas } from '@/data/kaggas';
+import { kaggas } from '@/data/kaggas';
 import { BookOpen, Video, Search, Heart } from 'lucide-react';
 import Link from 'next/link';
+import { Kagga } from '@/types/kagga';
 
 export default function HomePage() {
   const t = useTranslations();
   const commonT = useTranslations('common');
 
   // Get featured Kaggas (first 6)
-  const featuredKaggas = allKaggas.slice(0, 6);
+  const featuredKaggas = kaggas.slice(0, 6);
 
   const features = [
     {
@@ -92,7 +93,7 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-              {featuredKaggas.map((kagga, index) => (
+              {featuredKaggas.map((kagga: Kagga, index: number) => (
                 <div
                   key={kagga.id}
                   >

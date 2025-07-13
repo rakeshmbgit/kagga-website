@@ -1,26 +1,26 @@
 'use client';
 
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { BookOpen, Mail, Github, Heart } from 'lucide-react';
 
 const Footer = () => {
   const t = useTranslations('footer');
   const navT = useTranslations('navigation');
+  const locale = useLocale();
 
   const quickLinks = [
-    { name: navT('home'), href: '' },
-    { name: navT('allKaggas'), href: 'kaggas' },
-    { name: navT('videos'), href: 'videos' },
-    { name: navT('aboutDVG'), href: 'about-dvg' },
-    { name: navT('aboutKagga'), href: 'about-kagga' },
+    { name: navT('home'), href: `/${locale}` },
+    { name: navT('allKaggas'), href: `/${locale}/kaggas` },
+    { name: navT('videos'), href: `/${locale}/videos` },
+    { name: navT('aboutDVG'), href: `/${locale}/about-dvg` },
+    { name: navT('aboutKagga'), href: `/${locale}/about-kagga` },
   ];
 
   const resources = [
-    { name: t('search'), href: 'search' },
-    { name: t('browseByTheme'), href: 'themes' },
-    { name: t('favorites'), href: 'favorites' },
-    { name: t('contactUs'), href: 'contact' },
+    { name: t('search'), href: `/${locale}/search` },
+    { name: t('browseByTheme'), href: `/${locale}/themes` },
+    { name: t('contactUs'), href: `mailto:contact@dvg-kagga.com` },
   ];
 
   return (

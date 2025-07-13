@@ -137,7 +137,7 @@ export default function KaggaDetailClient({ kagga, prevKagga, nextKagga }: Kagga
                 {t('originalText')}
               </h2>
               <div className="bg-earth-50 rounded-lg p-6">
-                <p className="kagga-text text-2xl md:text-3xl leading-relaxed text-center">
+                <p className="kagga-text text-lg leading-relaxed text-center">
                   {kagga.kannadaText}
                 </p>
               </div>
@@ -149,7 +149,7 @@ export default function KaggaDetailClient({ kagga, prevKagga, nextKagga }: Kagga
                 {t('transliteration')}
               </h2>
               <div className="bg-earth-50 rounded-lg p-6">
-                <p className="transliteration text-lg md:text-xl text-center">
+                <p className="transliteration text-lg leading-relaxed text-center">
                   {kagga.transliteration}
                 </p>
               </div>
