@@ -47,9 +47,11 @@ const Footer = () => {
                 <Mail className="w-5 h-5" />
               </a>
               <a
-                href="https://github.com/dvg-kagga"
+                href="https://github.com/rakeshmbgit/kagga-website"
                 className="text-earth-300 hover:text-white transition-colors duration-200"
                 aria-label="Visit our GitHub repository"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Github className="w-5 h-5" />
               </a>
