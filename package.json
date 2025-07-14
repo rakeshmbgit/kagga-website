@@ -14,6 +14,7 @@
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
     "autoprefixer": "^10.4.16",
+    "critters": "^0.0.23",
     "framer-motion": "^10.16.16",
     "fuse.js": "^7.0.0",
     "json5": "^2.2.3",
