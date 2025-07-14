@@ -18,117 +18,109 @@ export default function AboutKaggaPage() {
       <main className="py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Header */}
-          <div className="text-center mb-16 relative">
+          <div className="text-center mb-12 relative">
             <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-yellow-500/10 rounded-3xl blur-3xl"></div>
-            <div className="relative">
+            <div className="relative py-8">
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500 to-yellow-500 text-white px-4 py-2 rounded-full text-sm font-medium mb-6 animate-pulse">
                 <Heart className="w-4 h-4" />
                 <span>ಕನ್ನಡ ಸಾಹಿತ್ಯ</span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-red-600 to-yellow-600 bg-clip-text text-transparent mb-6 animate-fade-in">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-red-600 to-yellow-600 bg-clip-text text-transparent mb-6 animate-fade-in kannada-heading py-2">
                 {t('title')}
               </h1>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-                {t('subtitle')}
+                {t('timelessMasterpieceDesc')}
               </p>
             </div>
           </div>
 
-          {/* Description */}
-          <div className="backdrop-blur-md bg-white/80 rounded-2xl shadow-xl border border-white/20 p-8 mb-12 transform hover:scale-[1.02] transition-all duration-300">
+          {/* Kagga Overview */}
+          <div className="backdrop-blur-md bg-white/80 rounded-2xl shadow-xl border border-white/20 p-8 mb-12 transform hover:scale-[1.02] transition-all duration-300 animate-fade-in-up">
             <div className="flex items-center space-x-4 mb-8">
               <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-yellow-500 rounded-2xl flex items-center justify-center shadow-lg">
                 <BookOpen className="w-8 h-8 text-white" />
               </div>
-              <h2 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-yellow-600 bg-clip-text text-transparent">
-                {t('aboutTheWork')}
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-yellow-600 bg-clip-text text-transparent kannada-heading">
+                {t('aboutTheWorkTitle')}
               </h2>
             </div>
-
-            <div className="prose prose-lg max-w-none">
-              <p className="text-gray-700 leading-relaxed mb-8 text-lg">
+            <div className="prose prose-lg max-w-none text-gray-800 space-y-6">
+              <p>
+                <span className="font-semibold">{t('title')}</span> ({t('title')}), {t('aboutTheWorkDesc')}
+              </p>
+              <p>
                 {t('description')}
               </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
                 <div className="text-center group">
                   <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-yellow-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-200">
                     <BookOpen className="w-8 h-8 text-white" />
                   </div>
-                  <p className="text-3xl font-bold text-gray-900">945</p>
+                  <p className="text-3xl font-bold text-gray-900">{t('versesCountDesc')}</p>
                   <p className="text-sm text-gray-600 font-medium">{t('verses')}</p>
                 </div>
                 <div className="text-center group">
                   <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-200">
                     <Star className="w-8 h-8 text-white" />
                   </div>
-                  <p className="text-3xl font-bold text-gray-900">50+</p>
-                  <p className="text-sm text-gray-600 font-medium">{t('themes')}</p>
-                </div>
-                <div className="text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-yellow-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-200">
-                    <Users className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-3xl font-bold text-gray-900">Millions</p>
-                  <p className="text-sm text-gray-600 font-medium">{t('readers')}</p>
-                </div>
-                <div className="text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-600 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-200">
-                    <Calendar className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-3xl font-bold text-gray-900">1943</p>
-                  <p className="text-sm text-gray-600 font-medium">{t('published')}</p>
+                  <p className="text-3xl font-bold text-gray-900">{t('yearPublishedDesc')}</p>
+                  <p className="text-sm text-gray-600 font-medium">{t('yearPublished')}</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Structure */}
-          <div className="backdrop-blur-md bg-white/80 rounded-2xl shadow-xl border border-white/20 p-8 mb-12 transform hover:scale-[1.02] transition-all duration-300">
+          {/* The Spirit of Kagga */}
+          <div className="backdrop-blur-md bg-white/80 rounded-2xl shadow-xl border border-white/20 p-8 mb-12 transform hover:scale-[1.02] transition-all duration-300 animate-fade-in-up">
             <div className="flex items-center space-x-4 mb-8">
               <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-red-500 rounded-2xl flex items-center justify-center shadow-lg">
-                <Star className="w-8 h-8 text-white" />
+                <Sparkles className="w-8 h-8 text-white" />
               </div>
-              <h2 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-yellow-600 bg-clip-text text-transparent">
-                {t('structureAndThemes')}
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-yellow-600 bg-clip-text text-transparent kannada-heading">
+                {t('spiritOfKagga')}
               </h2>
             </div>
-
-            <div className="prose prose-lg max-w-none">
-              <p className="text-gray-700 leading-relaxed text-lg">
-                {t('structure')}
+            <div className="prose prose-lg max-w-none text-gray-800 space-y-6">
+              <p>
+                {t('spiritOfKaggaDesc')}
               </p>
+              <div className="bg-gradient-to-r from-yellow-50 to-red-50 rounded-xl p-6 border-l-4 border-yellow-400 shadow-md animate-fade-in-up">
+                <p className="kagga-text text-xl text-center mb-2 text-gray-900 font-bold">
+                  ಹುಲ್ಲಾಗು ಬೆಟ್ಟದಡಿ, ಮನೆಗೆ ಮಲ್ಲಿಗೆಯಾಗು<br/>
+                  ಕಲ್ಲಾಗು ಕಷ್ಟಗಳ ಮಳೆಯ ವಿಧಿ ಸುರಿಯೆ<br/>
+                  ಬೆಲ್ಲ ಸಕ್ಕರೆಯಾಗು ದೀನ ದುರ್ಬಲರಿಂಗೆ<br/>
+                  ಎಲ್ಲರೊಳಗೊಂದಾಗು ಮಂಕುತಿಮ್ಮ
+                </p>
+                <p className="text-center italic text-gray-700 mb-2">
+                  {t('verseTranslation')}
+                </p>
+                <p className="text-center text-gray-600">
+                  <span className="font-medium">{t('verseExplanation')}</span>
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* Sample Verses */}
-          <div className="bg-gradient-to-r from-red-500/10 to-yellow-500/10 backdrop-blur-md rounded-2xl p-8 mb-12 border border-white/20">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center bg-gradient-to-r from-red-600 to-yellow-600 bg-clip-text text-transparent">
-              {t('sampleVerses')}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="backdrop-blur-md bg-white/80 rounded-xl p-6 shadow-lg border border-white/20 hover:scale-105 transition-transform duration-300">
-                <p className="kagga-text text-lg text-center mb-4 text-gray-800">
-                  "ಜಲದ ಬುಗ್ಗೆ ಜಲವೇ ಸುರಿಯುತ್ತದೆ, ಮನದ ಬುಗ್ಗೆ ಮನವೇ ಸುರಿಯುತ್ತದೆ"
-                </p>
-                <p className="text-sm text-gray-600 text-center italic">
-                  "From a water spring flows water, from a mind spring flows mind"
-                </p>
+          {/* Significance */}
+          <div className="backdrop-blur-md bg-white/80 rounded-2xl shadow-xl border border-white/20 p-8 mb-12 transform hover:scale-[1.02] transition-all duration-300 animate-fade-in-up">
+            <div className="flex items-center space-x-4 mb-8">
+              <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-yellow-600 rounded-2xl flex items-center justify-center shadow-lg">
+                <Quote className="w-8 h-8 text-white" />
               </div>
-              <div className="backdrop-blur-md bg-white/80 rounded-xl p-6 shadow-lg border border-white/20 hover:scale-105 transition-transform duration-300">
-                <p className="kagga-text text-lg text-center mb-4 text-gray-800">
-                  "ಕಾಲವೇ ಗುರು, ಕಾಲವೇ ಶಿಷ್ಯ, ಕಾಲವೇ ಜ್ಞಾನ, ಕಾಲವೇ ವಿದ್ಯೆ"
-                </p>
-                <p className="text-sm text-gray-600 text-center italic">
-                  "Time is the teacher, time is the student, time is knowledge, time is learning"
-                </p>
-              </div>
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-yellow-600 bg-clip-text text-transparent kannada-heading">
+                {t('significance')}
+              </h2>
+            </div>
+            <div className="prose prose-lg max-w-none text-gray-800 space-y-6">
+              <p>
+                <span className="font-semibold">{t('title')}</span> {t('significanceDesc')}
+              </p>
             </div>
           </div>
 
           {/* Call to Action */}
           <div className="backdrop-blur-md bg-white/80 rounded-2xl shadow-xl border border-white/20 p-8 text-center transform hover:scale-[1.02] transition-all duration-300">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-red-600 to-yellow-600 bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-red-600 to-yellow-600 bg-clip-text text-transparent kannada-heading">
               {t('startYourJourney')}
             </h2>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto text-lg leading-relaxed">

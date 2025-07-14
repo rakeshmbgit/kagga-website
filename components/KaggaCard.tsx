@@ -1,9 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Kagga } from '@/types/kagga';
-import { BookOpen, Play, Share2, Heart } from 'lucide-react';
+import LikeButton from '@/components/LikeButton';
+import { BookOpen, Play, Share2 } from 'lucide-react';
 
 interface KaggaCardProps {
   kagga: Kagga;
@@ -13,6 +14,7 @@ interface KaggaCardProps {
 
 const KaggaCard = ({ kagga, variant = 'default', showVideo = true }: KaggaCardProps) => {
   const locale = useLocale();
+  const t = useTranslations('common');
   const isCompact = variant === 'compact';
   const isFeatured = variant === 'featured';
 
@@ -22,7 +24,7 @@ const KaggaCard = ({ kagga, variant = 'default', showVideo = true }: KaggaCardPr
     if (navigator.share) {
       try {
         await navigator.share({
-          title: `Kagga ${kagga.id} - ${kagga.englishTranslation}`,
+          title: `${t('kagga')} ${kagga.id} - ${kagga.englishTranslation}`,
           text: kagga.kannadaText,
           url: shareUrl,
         });
@@ -45,7 +47,7 @@ const KaggaCard = ({ kagga, variant = 'default', showVideo = true }: KaggaCardPr
           <div className="w-8 h-8 bg-gradient-to-br from-primary-100 to-karnataka-100 rounded-lg flex items-center justify-center group-hover:from-primary-200 group-hover:to-karnataka-200 transition-all duration-300">
             <BookOpen className="w-4 h-4 text-primary-600 group-hover:text-primary-700 transition-colors duration-300" />
           </div>
-          <span className="font-semibold text-earth-900">Kagga {kagga.id}</span>
+          <span className="font-semibold text-earth-900">{t('kagga')} {kagga.id}</span>
         </div>
         
         {!isCompact && (
@@ -53,16 +55,16 @@ const KaggaCard = ({ kagga, variant = 'default', showVideo = true }: KaggaCardPr
             <button
               onClick={handleShare}
               className="p-1 text-earth-400 hover:text-primary-600 transition-all duration-200 hover:scale-110"
-              aria-label="Share this Kagga"
+              aria-label={t('shareThisKagga')}
             >
               <Share2 className="w-4 h-4" />
             </button>
-            <button
+            <LikeButton 
+              kaggaId={kagga.id} 
+              size="sm"
+              showCount={false}
               className="p-1 text-earth-400 hover:text-primary-600 transition-all duration-200 hover:scale-110"
-              aria-label="Add to favorites"
-            >
-              <Heart className="w-4 h-4" />
-            </button>
+            />
           </div>
         )}
       </div>
@@ -87,7 +89,7 @@ const KaggaCard = ({ kagga, variant = 'default', showVideo = true }: KaggaCardPr
       {!isCompact && (
         <div className="mb-4">
           <p className="meaning text-sm line-clamp-3 leading-relaxed">
-            {kagga.meaning}
+            {kagga.meaningInEnglish}
           </p>
         </div>
       )}
@@ -115,7 +117,7 @@ const KaggaCard = ({ kagga, variant = 'default', showVideo = true }: KaggaCardPr
           href={`/${locale}/kaggas/${kagga.id}`}
           className="text-primary-600 hover:text-primary-700 font-medium text-sm flex items-center group transition-all duration-200"
         >
-          Read Full Kagga
+          {t('readFullKagga')}
           <BookOpen className="w-3 h-3 ml-1 group-hover:translate-x-0.5 transition-transform duration-200" />
         </Link>
 
@@ -125,14 +127,14 @@ const KaggaCard = ({ kagga, variant = 'default', showVideo = true }: KaggaCardPr
             className="text-earth-600 hover:text-primary-600 font-medium text-sm flex items-center group transition-all duration-200"
           >
             <Play className="w-3 h-3 mr-1 group-hover:scale-110 transition-transform duration-200" />
-            Watch Video
+            {t('watchVideo')}
           </Link>
         )}
       </div>
 
       {isFeatured && (
         <div className="absolute -top-2 -right-2 bg-gradient-to-r from-primary-500 to-karnataka-500 text-white text-xs px-3 py-1 rounded-full shadow-lg">
-          Featured
+          {t('featured')}
         </div>
       )}
     </div>

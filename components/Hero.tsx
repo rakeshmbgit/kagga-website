@@ -24,16 +24,16 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left">
-            <div className="inline-flex items-center bg-gradient-to-r from-primary-500 to-karnataka-500 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center bg-gradient-to-r from-primary-500 to-karnataka-500 text-white px-4 py-2 rounded-full text-sm font-medium mb-8">
               <Sparkles className="w-4 h-4 mr-2" />
               Karnataka's Pride
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-earth-900 mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-earth-900 mb-8 leading-tight">
               {t('title')}
             </h1>
             
-            <p className="text-xl md:text-2xl text-primary-600 font-semibold mb-4">
+            <p className="text-xl md:text-2xl text-primary-600 font-semibold mb-6">
               {t('subtitle')}
             </p>
             
@@ -70,13 +70,13 @@ const Hero = () => {
                   <BookOpen className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-earth-900 mb-4">
-                  945 Kaggas
+                  {t('kaggasCount')}
                 </h3>
                 <p className="text-earth-600 mb-6 leading-relaxed">
                   {t('description')}
                 </p>
                 <Link
-                  href={`/${locale}/search`}
+                  href={`/${locale}/kaggas`}
                   className="btn-primary inline-flex items-center"
                 >
                   <Search className="w-4 h-4 mr-2" />

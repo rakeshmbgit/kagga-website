@@ -19,12 +19,12 @@ export default function VideosPage() {
           {/* Hero Header */}
           <div className="text-center mb-16 relative">
             <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-yellow-500/10 rounded-3xl blur-3xl"></div>
-            <div className="relative">
+            <div className="relative py-8">
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500 to-yellow-500 text-white px-4 py-2 rounded-full text-sm font-medium mb-6 animate-pulse">
                 <Camera className="w-4 h-4" />
                 <span>ವಿಡಿಯೋ ಶಿಕ್ಷಣ</span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-red-600 to-yellow-600 bg-clip-text text-transparent mb-6 animate-fade-in">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-red-600 to-yellow-600 bg-clip-text text-transparent mb-6 animate-fade-in leading-tight">
                 {t('title')}
               </h1>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">

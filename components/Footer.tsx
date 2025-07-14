@@ -3,12 +3,15 @@
 import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
 import { BookOpen, Mail, Github, Heart } from 'lucide-react';
+import { useState } from 'react';
+import DisclaimerModal from './DisclaimerModal';
 
 const Footer = () => {
   const t = useTranslations('footer');
   const navT = useTranslations('navigation');
   const commonT = useTranslations('common');
   const locale = useLocale();
+  const [showDisclaimer, setShowDisclaimer] = useState(false);
 
   const quickLinks = [
     { name: navT('home'), href: `/${locale}` },
@@ -22,6 +25,7 @@ const Footer = () => {
     { name: t('search'), href: `/${locale}/search` },
     { name: t('browseByTheme'), href: `/${locale}/themes` },
     { name: t('contactUs'), href: `mailto:contact@dvg-kagga.com` },
+    { name: t('disclaimer'), onClick: () => setShowDisclaimer(true) },
   ];
 
   return (
@@ -87,12 +91,22 @@ const Footer = () => {
             <ul className="space-y-2">
               {resources.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-earth-300 hover:text-primary-400 transition-all duration-200 hover:translate-x-1 inline-block"
-                  >
-                    {link.name}
-                  </Link>
+                  {link.href ? (
+                    <Link
+                      href={link.href}
+                      className="text-earth-300 hover:text-primary-400 transition-all duration-200 hover:translate-x-1 inline-block"
+                    >
+                      {link.name}
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={link.onClick}
+                      className="text-earth-300 hover:text-primary-400 transition-all duration-200 hover:translate-x-1 inline-block underline"
+                      aria-label="Show disclaimer"
+                    >
+                      {link.name}
+                    </button>
+                  )}
                 </li>
               ))}
             </ul>
@@ -111,6 +125,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <DisclaimerModal open={showDisclaimer} onClose={() => setShowDisclaimer(false)} />
     </footer>
   );
 };

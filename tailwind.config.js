@@ -59,7 +59,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        kannada: ['Noto Sans Kannada', 'system-ui', 'sans-serif'],
+        kannada: ['Noto Sans Kannada', 'Tunga', 'Arial Unicode MS', 'Arial', 'system-ui', 'sans-serif'],
         serif: ['Georgia', 'serif'],
       },
       animation: {

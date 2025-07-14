@@ -10,10 +10,19 @@
   
   body {
     @apply bg-gradient-to-br from-karnataka-50 to-primary-50 text-earth-900 font-sans;
+    font-feature-settings: "liga" 1, "kern" 1;
+    text-rendering: optimizeLegibility;
   }
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
+  }
+  
+  /* Ensure Kannada text renders properly */
+  .font-kannada {
+    font-family: 'Noto Sans Kannada', 'Tunga', 'Arial Unicode MS', 'Arial', sans-serif;
+    font-feature-settings: "liga" 1, "kern" 1;
+    text-rendering: optimizeLegibility;
   }
 }
 
@@ -36,6 +45,25 @@
   
   .kagga-text {
     @apply font-kannada text-lg leading-relaxed;
+  }
+  
+  .kannada-heading {
+    @apply font-kannada leading-relaxed;
+    line-height: 1.4;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    overflow: visible;
+  }
+  
+  .kannada-heading-sm {
+    @apply font-kannada leading-relaxed;
+    line-height: 1.6;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
   
   .transliteration {

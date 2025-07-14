@@ -4,7 +4,8 @@ export interface Kagga {
   transliteration: string;
   englishTranslation: string;
   wordByWordMeaning?: string;
-  meaning: string;
+  meaningInEnglish: string;
+  meaningInKannada: string;
   themes: string[];
   videoUrl?: string;
   videoTitle?: string;

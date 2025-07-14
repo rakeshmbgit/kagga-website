@@ -8,12 +8,13 @@
     "search": "Search Kaggas"
   },
   "hero": {
-    "title": "DVG & Mankuthimmana Kagga",
+    "title": "Mankuthimmana Kagga",
     "subtitle": "Digital Repository",
     "description": "Explore the profound wisdom of D.V. Gundappa through Mankuthimmana Kagga. A comprehensive digital platform featuring all 945 Kaggas with translations, meanings, and video explanations.",
     "exploreButton": "Explore All Kaggas",
     "watchVideosButton": "Watch Videos",
-    "searchButton": "Search Kaggas"
+    "searchButton": "Search Kaggas",
+    "kaggasCount": "945 Kaggas"
   },
   "common": {
     "loading": "Loading...",
@@ -36,22 +37,29 @@
     "kaggas": "Kaggas",
     "language": "Language",
     "brandName": "DVG Kagga",
-    "digitalRepository": "Digital Repository"
+    "digitalRepository": "Digital Repository",
+    "discover": "Discover",
+    "featured": "Featured",
+    "readFullKagga": "Read Full Kagga",
+    "kagga": "Kagga",
+    "shareThisKagga": "Share this Kagga"
   },
-  "kagga": {
-    "title": "Kagga {id}",
+  "KaggaDetail": {
+    "backToList": "Back to List",
+    "share": "Share",
+    "print": "Print",
+    "kagga": "Kagga",
+    "mankuthimmanaKagga": "Mankuthimmana Kagga",
     "originalText": "Original Text (ಕನ್ನಡ)",
     "transliteration": "Transliteration",
-    "englishTranslation": "English Translation",
-    "wordByWordMeaning": "Word-by-Word Meaning",
-    "meaning": "Meaning & Interpretation",
+    "englishTranslation": "Meaning in Kannada",
+    "detailedMeaning": "Meaning & Interpretation",
     "themes": "Themes",
-    "videoExplanation": "Video Explanation",
-    "showVideo": "Show Video",
-    "hideVideo": "Hide Video",
-    "relatedKaggas": "Related Kaggas",
-    "readFullKagga": "Read Full Kagga",
-    "watchVideo": "Watch Video"
+    "videoSection": "Video Section",
+    "videoComingSoon": "Video Coming Soon",
+    "videoDescription": "Detailed video explanations by scholars and experts will be available soon.",
+    "previousKagga": "Previous Kagga",
+    "nextKagga": "Next Kagga"
   },
   "footer": {
     "description": "A comprehensive digital repository dedicated to preserving and sharing the profound wisdom of D.V. Gundappa's Mankuthimmana Kagga.",
@@ -63,7 +71,8 @@
     "contactUs": "Contact Us",
     "madeWith": "Made with",
     "forKannadaLiterature": "for Kannada literature",
-    "allRightsReserved": "All rights reserved"
+    "allRightsReserved": "All rights reserved",
+    "disclaimer": "Disclaimer"
   },
   "about": {
     "dvg": {
@@ -85,7 +94,47 @@
       "exploreWisdom": "Explore DVG's Wisdom",
       "exploreWisdomDesc": "Discover the profound wisdom of D.V. Gundappa through his masterpiece, Mankuthimmana Kagga. Each of the 945 verses contains timeless insights that are as relevant today as they were when written.",
       "readAllKaggas": "Read All Kaggas",
-      "learnAboutKagga": "Learn About Mankuthimmana Kagga"
+      "learnAboutKagga": "Learn About Mankuthimmana Kagga",
+      "philosopherPoet": "Philosopher-Poet",
+      "philosopherPoetDesc": "Philosopher, poet, journalist, and guide of modern Kannada literature. His wisdom, humility, and vision continue to inspire generations.",
+      "fullName": "Devanahalli Venkataramanaiah Gundappa",
+      "shortName": "(D.V. Gundappa / DVG)",
+      "earlyLife": "Early Life & Education",
+      "earlyLifeDesc": "Born in Mulbagal, Kolar district, DVG grew up in a family that valued learning and culture. His early education was shaped by traditional Indian thought and the vibrant intellectual environment of Mysore.",
+      "earlyLifeDesc2": "He was a keen observer of society from a young age, and his curiosity led him to explore literature, philosophy, and public affairs. These formative years laid the foundation for his lifelong quest for knowledge and service.",
+      "literaryCareer": "Literary Career & Journalism",
+      "literaryCareerDesc": "DVG began his career in journalism, founding and editing several Kannada newspapers and magazines. His sharp intellect and commitment to truth made him a respected voice in public discourse.",
+      "literaryCareerDesc2": "As a writer, DVG produced a vast body of work spanning poetry, essays, biographies, and philosophy. His writing is known for its clarity, depth, and accessibility.",
+      "majorWorks": "Major Works",
+      "majorWorksDesc": "As a writer, DVG produced a vast body of work spanning poetry, essays, biographies, and philosophy. His writing is known for its clarity, depth, and accessibility.",
+      "philosophyLegacy": "Philosophy & Legacy",
+      "philosophyLegacyDesc": "DVG's philosophy was rooted in the belief that life is a divine play, to be lived with cheerfulness, humility, and a sense of service. He emphasized the importance of dissolving the ego, honoring human aspirations, and working for noble causes.",
+      "philosophyLegacyDesc2": "His legacy endures in the countless lives he touched, the institutions he founded, and the literature he enriched. DVG's works are studied in schools and universities, and his influence is felt in Kannada culture and beyond.",
+      "awardsHonors": "Awards and Honors",
+      "awardsHonorsDesc": "DVG received several awards and honors for his contributions, recognizing his literary and social contributions.",
+      "bornDate": "March 17, 1887",
+      "birthplaceName": "Mulbagal, Kolar, Karnataka",
+      "awardsList": "Padma Bhushan, Sahitya Akademi Award",
+      "masterpieceName": "Mankuthimmana Kagga",
+      "legacyDesc": "DVG was a giant of Kannada literature, whose works bridge ancient Indian wisdom and modern life. His legacy is one of humility, service, and profound philosophical insights.",
+      "quoteText": "ಮಂಕುತಿಮ್ಮನ ಕಗ್ಗದಲ್ಲಿ ಜೀವನದ ಎಲ್ಲಾ ಸತ್ಯಗಳಿವೆ",
+      "quoteTranslation": "All truths of life are contained in Mankuthimmana Kagga",
+      "mankuthimmanaKaggaDesc": "A collection of 945 philosophical verses, often called the 'Bhagavad Gita of Kannada' for its depth and universality.",
+      "marulaMuniyanaKaggaDesc": "A sequel to Kagga, published posthumously, continuing the tradition of wisdom poetry.",
+      "jnapakachitrashaaleDesc": "Memoirs offering a vivid portrait of early 20th-century Karnataka and its personalities.",
+      "bhagavadGeetaDesc": "A celebrated commentary on the Bhagavad Gita, awarded the Sahitya Akademi Award in 1967.",
+      "antahpuraDesc": "Poems on the lives and emotions of women in royal households.",
+      "purusharthaDesc": "Essays on the four aims of human life: dharma, artha, kama, and moksha.",
+      "vasanthaKusumanjaliDesc": "His first poetry collection, featuring pen portraits of national leaders and reformers.",
+      "biographiesDesc": "Pioneering works in Kannada biography, reflecting DVG's interest in politics and public life.",
+      "mankuthimmanaKaggaTitle": "Mankuthimmana Kagga (1943)",
+      "marulaMuniyanaKaggaTitle": "Marula Muniyana Kagga",
+      "jnapakachitrashaaleTitle": "Jnapakachitrashaale",
+      "bhagavadGeetaTitle": "Srimad BhagavadGeeta Tatparya (Jeevana Dharma Yoga)",
+      "antahpuraTitle": "Antahpura",
+      "purusharthaTitle": "Purushartha",
+      "vasanthaKusumanjaliTitle": "Vasantha Kusumanjali",
+      "biographiesTitle": "Biographies: Rangacharlu, Gopalakrishna Gokhale, Dadabhai Navaroji"
     },
     "kagga": {
       "title": "About Mankuthimmana Kagga",
@@ -102,7 +151,21 @@
       "startYourJourney": "Start Your Journey",
       "startYourJourneyDesc": "Begin exploring the wisdom of Mankuthimmana Kagga. Each verse offers profound insights that can guide you through life's challenges and joys.",
       "exploreAllKaggas": "Explore All Kaggas",
-      "searchByTheme": "Search by Theme"
+      "searchByTheme": "Search by Theme",
+      "timelessMasterpiece": "Timeless Masterpiece",
+      "timelessMasterpieceDesc": "A timeless masterpiece of Kannada literature by D.V. Gundappa (1943)",
+      "aboutTheWorkTitle": "About the Work",
+      "aboutTheWorkDesc": "Mankuthimmana Kagga (ಮಂಕುತಿಮ್ಮನ ಕಗ್ಗ), written by Dr. D.V. Gundappa and published in 1943, is a collection of 945 four-line poems that explore deep questions of life, spirituality, and human nature. Often called the 'Bhagavad Gita of Kannada', the Kagga is celebrated for its simplicity, depth, and universal appeal.",
+      "spiritOfKagga": "The Spirit of Kagga",
+      "spiritOfKaggaDesc": "The Kagga teaches the importance of humility, patience, compassion, and living in harmony with others. Its philosophy encourages us to be humble and gentle, yet strong in adversity, and to cultivate compassion and balance in life.",
+      "significance": "Significance",
+      "significanceDesc": "Mankuthimmana Kagga explores the complexities of life, providing practical wisdom for everyday living. Its verses encourage readers to face challenges courageously, maintain humility, and cultivate compassion. The work has remained a guiding light for generations, inspiring people to seek balance and meaning in their lives.",
+      "yearPublished": "Year Published",
+      "versesCount": "Verses",
+      "versesCountDesc": "945",
+      "yearPublishedDesc": "1943",
+      "verseTranslation": "Be a gentle blade of grass at the foot of the mountain, a jasmine flower at home; Be strong like a rock when fate pours rains of difficulties; Be sweet like sugar and jaggery to the poor and weak; Be one among all, Mankuthimma.",
+      "verseExplanation": "This verse teaches us to be humble and gentle, yet strong in adversity, compassionate to the weak, and to live in harmony with all."
     }
   },
   "search": {
@@ -145,8 +208,8 @@
       "videosDesc": "Visual insights and detailed explanations by scholars and experts",
       "searchTitle": "Advanced Search",
       "searchDesc": "Find specific Kaggas by theme, content, or keywords",
-      "favoritesTitle": "Personal Favorites",
-      "favoritesDesc": "Save and organize your favorite Kaggas for easy access"
+      "favoritesTitle": "Like & Share",
+      "favoritesDesc": "Like your favorite Kaggas and share or print them for easy access"
     }
   }
 } 
