@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
@@ -14,6 +14,7 @@ export default function HomePage() {
   const t = useTranslations();
   const commonT = useTranslations('common');
   const homeT = useTranslations('home');
+  const locale = useLocale();
 
   // Get featured Kaggas (first 6)
   const featuredKaggas = kaggas.slice(0, 6);
@@ -124,7 +125,7 @@ export default function HomePage() {
 
             <div className="text-center">
               <Link
-                href="kaggas"
+                href={`/${locale}/kaggas`}
                 className="btn-primary inline-flex items-center group glow-effect"
               >
                 <BookOpen className="w-5 h-5 mr-2" />

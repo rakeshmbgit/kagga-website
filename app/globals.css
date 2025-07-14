@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Kannada:wght@300;400;500;600;700&display=swap');
+/* Optimized font loading - removed Google Fonts CDN for better performance */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,11 +18,12 @@
     @apply font-serif;
   }
   
-  /* Ensure Kannada text renders properly */
+  /* Ensure Kannada text renders properly with optimized font loading */
   .font-kannada {
     font-family: 'Noto Sans Kannada', 'Tunga', 'Arial Unicode MS', 'Arial', sans-serif;
     font-feature-settings: "liga" 1, "kern" 1;
     text-rendering: optimizeLegibility;
+    font-display: swap;
   }
 }
 
